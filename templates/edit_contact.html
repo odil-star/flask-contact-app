@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать контакт</title>
+</head>
+<body>
+    <h1>Редактировать контакт</h1>
+    <form method="POST">
+        <label>Имя:</label><br>
+        <input type="text" name="name" value="{{ contact.name }}"><br><br>
+
+        <label>Телефон:</label><br>
+        <input type="text" name="phone" value="{{ contact.phone }}"><br><br>
+
+        <label>Чем занимается:</label><br>
+        <input type="text" name="description" value="{{ contact.description }}"><br><br>
+
+        <button type="submit">Сохранить</button>
+    </form>
+</body>
+</html>

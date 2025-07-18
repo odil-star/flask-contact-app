@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список контактов</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Список контактов</h1>
+
+<h2>Список контактов</h2>
+<ul>
+  {% for contact in contacts %}
+    <li><strong>{{ contact.name }}</strong> — {{ contact.phone }} — {{ contact.description }}</li>
+  {% endfor %}
+</ul>
+
+
+        <form method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Введите имя" required>
+            <button type="submit">➕ Добавить</button>
+        </form>
+
+        <ul class="contact-list">
+            {% for contact in contacts %}
+                <li>{{ loop.index }}. {{ contact.name }}</li>
+            {% else %}
+                <li>Нет сохранённых контактов</li>
+            {% endfor %}
+        </ul>
+
+        <a href="/" class="back-link">⬅ На главную</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Добро пожаловать!</h1>
+        <p>Это простое веб-приложение на Flask, Я его создал для показа.</p>
+        <p>Вы можете:</p>
+        <ul>
+            <li>✍ Добавить контакт — <a href="/contact">сюда</a></li>
+            <li>📋 Посмотреть все контакты — <a href="/contacts">сюда</a></li>
+            <li>ℹ Узнать о проекте — <a href="/about">сюда</a></li>
+        </ul>
+    </div>
+</body>
+</html>
